@@ -124,7 +124,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+
 }
 
 .logo-dark {
@@ -933,11 +933,12 @@ padding-bottom: 90px;
 
 .cta-section {
   position: relative;
-  height: 560px;
+  min-height: 480px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--green-bg);
 }
 
 
@@ -983,7 +984,6 @@ padding-bottom: 90px;
 .cta-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 24px;
 }
 
@@ -991,15 +991,24 @@ padding-bottom: 90px;
   width: 100%;
   max-width: 604px;
   color: var(--Gray, #7785A2);
-  text-align: left;
+  text-align: right;
   font-family: Satoshi;
   font-size: 20px;
   line-height: 160%;
-  /* 32px */
+}
+
+.desktop-br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-br {
+    display: inline;
+  }
 }
 
 .btn-primary {
-  align-self: flex-start;
+  align-self: flex-end;
 }
 
 /* .btn-cta {
