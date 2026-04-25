@@ -19,6 +19,33 @@ if (navbar) {
   handleScroll();
 }
 
+// ─── Mobile Menu ───────────────────────────────────────────────────
+const menuToggle = document.getElementById('menuToggle');
+const closeMenu = document.getElementById('closeMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+  });
+}
+
+if (closeMenu && mobileMenu) {
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+  });
+}
+
+// Close menu when clicking a link
+document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
 // logo
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
