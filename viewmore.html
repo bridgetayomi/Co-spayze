@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Co-spayze — Your Ideal Space Awaits</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        
+    </style>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><img src="/Img/Logo2.png" alt=""></div>
+            <div class="logo-dark"><img src="/Img/Property 1=blacklogo.svg" alt=""></div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn-ghost" onclick="window.location.href='contact.html'">Find your space</button>
+            <button class="btn-primary">List a space</button>
+        </div>
+    </nav>
+     
+
+
+
+    <!-- ===== LISTINGS ===== -->
+    <section class="listings-section">
+        <div class="listings-inner">
+            <div class="listings-header">
+                <div>
+
+                    <h2 class="section-title">Find what fits your<br />budget</h2>
+                    <div class="listings-filter-bar">
+                        <div class="filter-group">
+                            <label>Location</label>
+                            <div class="filter-input">
+                                <i class="fa-solid fa-crosshairs"></i>
+                                <select id="location">
+                                    <option value="ikeja">Ikeja</option>
+                                    <option value="lekki">Lekki</option>
+                                    <option value="vi">Victoria Island</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-divider"></div>
+
+                        <div class="filter-group">
+                            <label>Type</label>
+                            <div class="filter-input">
+                                <i class="fa-solid fa-users"></i>
+                                <select id="type">
+                                    <option value="apartment">Apartment</option>
+                                    <option value="shop">Shop Space</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-divider"></div>
+
+                        <div class="filter-group">
+                            <label>Amount</label>
+                            <div class="filter-input">
+                                <i class="fa-solid fa-wallet"></i>
+                                <input type="number" id="price" placeholder="20000">
+                            </div>
+                        </div>
+
+                        <div class="filter-divider divider-hide"></div>
+
+                        <button class="btn-explore-now">
+                            Explore Now
+                            <span class="arrow-wrap">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- <a href="#" class="view-more">View more →</a> -->
+            </div>
+            <div class="listings-grid">
+
+                <!-- Listing 1 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦200,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Oshinake Agege, Lagos</div>
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> 2 Rooms</span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> 1 Bath</span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> 1 Male</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 2 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/shop.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦900,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            Shop Space </div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Ikeja Gra, Lagos</div>
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties">
+                                <i class="fa fa-door-open meta-icon"></i><span class="meta-text">2 Space</span></span>
+
+                            <span class="section-properties">
+                                <i class="fa fa-bath meta-icon"></i>
+                                <span class="meta-text">1 Bath</span> </span>
+
+                            <span class="section-properties">
+                                <i class="fa fa-person meta-icon"></i>
+                                <span class="meta-text">1 Barber</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Listing 3 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Female</span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 4 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/shop.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Female</span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 5 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text"> 2
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Male</span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 6 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Female</span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 7 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Female</span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 8 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Female</span> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 9 -->
+                <div class="listing-card">
+                    <div class="listing-img">
+                        <img src="/Img/room.png" alt="Apartment" />
+                        <div class="listing-badges">
+                            <div class="label">Available</div>
+                        </div>
+                    </div>
+                    <div class="listing-body">
+                        <div class="listing-price">₦490,000 <span>/ year</span></div>
+                        <div class="listing-name">
+                            2 Bedroom Shared Apartment</div>
+                        <div class="listing-name"> <span class=""><i class="fa-solid fa-location-dot"></i>
+
+                                </i></span>Lekki Phase 1, Lagos</div>
+
+
+
+                        <div class="listing-meta">
+                            <span class="section-properties"><i class="fa fa-door-open meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Room</span> </span>
+                            <span class="section-properties"><i class="fa fa-bath meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Bath</span> </span>
+                            <span class="section-properties"><i class="fa fa-person meta-icon"></i> <span
+                                    class="meta-text">1
+                                    Female</span> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== CTA BANNER ===== -->
+
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Find your <span class="highlight">Spayze?</span></h2>
+
+            <div class="cta-text">
+                <p>Whether you’re looking for a cozy home or the perfect shop to start your business, we help you find
+                    the space
+                    that fits your vision.</p>
+                <button class="btn-primary">Get Started For Free</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-wordmark">CO-SPAYZE</div>
+        <nav>
+            <ul class="footer-nav">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <p class="footer-desc">We help you find and share shops or apartments by connecting
+            you with the right spaces and people, all in one place. It’s
+            built to make the process simple, comfortable,
+            and safe so you can easily find where you belong.</p>
+        <div class="footer-social">
+            <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Co-spayze. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
