@@ -206,7 +206,6 @@
   .toggle-pw:hover { color: var(--green-mid); }
   .toggle-pw svg { width: 18px; height: 18px; }
 
-  /* Button */
   .btn-primary {
     display: block; width: 100%; padding: 16px;
     background: var(--green-dark); color: var(--white);
@@ -216,6 +215,8 @@
     cursor: pointer;
     transition: background .2s, transform .15s, box-shadow .2s;
     letter-spacing: .02em;
+    text-align: center;
+    text-decoration: none;
   }
   .btn-primary:hover {
     background: var(--green-mid);
