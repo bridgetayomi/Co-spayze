@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-spayze — Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="signin-page-body">
+
+    <div class="signin-container">
+        <!-- LEFT: Visual Side (Hidden on Mobile) -->
+        <div class="signin-left">
+            <div class="glass-card">
+                <div class="glass-icon-circle">
+                    <img src="/Img/Logo2.png" alt="Home Icon" class="glass-icon">
+                </div>
+                <h2>Find your perfect space</h2>
+                <p>Digitally curating the future of shared professional environments.</p>
+                <div class="glass-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Form Side -->
+        <div class="signin-right">
+            <div class="signin-header">
+                <a href="index.html" class="logo-link">
+                    <img src="/Img/Property 1=blacklogo.svg" alt="Co-spayze Logo" class="signin-logo">
+                </a>
+                <a href="index.html" class="go-back-mobile"><i class="fa fa-arrow-left"></i> Go back</a>
+            </div>
+
+            <div class="signin-content">
+                <h1>Welcome to<br>Co-spayze</h1>
+                <p class="subtitle">Its been a minute.</p>
+
+                <form class="signin-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrap">
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password">
+                                <i class="fa-regular fa-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-continue">Continue</button>
+                </form>
+
+                <p class="signup-prompt">Already have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
