@@ -189,6 +189,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+
 }
 
 .btn-ghost {
@@ -202,6 +203,8 @@ img {
   background: transparent;
   cursor: pointer;
   transition: all 0.2s;
+  
+
 }
 
 .cta-section {
@@ -222,10 +225,7 @@ img {
   align-self: flex-end;
 }
 
-.btn-ghost {
-  color: #6B7280 !important;
-  border-color: #D1D5DB !important;
-}
+
 
 .btn-ghost:hover {
   background: #F9FAFB !important;
@@ -277,6 +277,7 @@ img {
 .navbar.scrolled .btn-ghost {
   border-color: var(--green-dark);
   color: var(--green-dark);
+
 }
 
 .navbar.scrolled .btn-ghost:hover {
@@ -1496,9 +1497,10 @@ padding-bottom: 90px;
   color: var(--text-dark) !important;
 }
 
-.contact-page-nav .btn-ghost {
+.contact-page-nav  {
+  background: var(--text-muted);
   border-color: var(--text-muted) !important;
-  color: var(--text-muted) !important;
+  color: white !important;
 }
 
 .contact-page-nav .btn-ghost:hover {
@@ -2108,9 +2110,9 @@ padding-bottom: 90px;
 }
 
 .navbar.scrolled .btn-ghost {
-  background: transparent;
+  background: var(--text-muted);
   border-color: var(--text-muted);
-  color: var(--text-muted) !important;
+  color: white !important;
 }
 
 .navbar.scrolled .btn-ghost:hover {
