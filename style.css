@@ -85,14 +85,14 @@ img {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 20px rgba(61, 107, 80, 0.08);
+  background: var(--green-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar.scrolled .nav-links a,
 .navbar.scrolled .logo-text {
-  color: var(--text-dark);
+  color: white;
 }
 
 .navbar.scrolled .nav-links a:hover {
@@ -137,11 +137,11 @@ img {
 }
 
 .navbar.scrolled .logo-icon {
-  display: none;
+  display: block;
 }
 
 .navbar.scrolled .logo-dark {
-  display: block;
+  display: none;
 }
 
 /* .logo-text {
@@ -1472,18 +1472,23 @@ padding-bottom: 90px;
    NAVBAR ON CONTACT PAGE
    =========================== */
 
+.contact-page-nav {
+  background: var(--green-dark) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .contact-page-nav .logo-text,
 .contact-page-nav .nav-links a {
-  color: var(--text-dark);
+  color: white !important;
 }
 
 .contact-page-nav .btn-ghost {
-  border-color: var(--green-dark);
-  color: var(--green-dark);
+  border-color: white !important;
+  color: white !important;
 }
 
 .contact-page-nav .btn-ghost:hover {
-  background: var(--green-pale);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .contact-page-nav {
@@ -1867,13 +1872,13 @@ padding-bottom: 90px;
 
 .navbar.scrolled .btn-ghost {
   background: transparent;
-  border-color: var(--green-dark);
-  color: var(--green-dark) !important;
+  border-color: white;
+  color: white !important;
 }
 
 .navbar.scrolled .btn-ghost:hover {
-  background: var(--green-pale);
-  color: var(--green-dark) !important;
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
 }
 
 /* ===========================
