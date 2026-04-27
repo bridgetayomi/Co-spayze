@@ -85,14 +85,14 @@ img {
 }
 
 .navbar.scrolled {
-  background: var(--green-dark);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: white;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 20px rgba(61, 107, 80, 0.08);
 }
 
 .navbar.scrolled .nav-links a,
 .navbar.scrolled .logo-text {
-  color: white;
+  color: var(--text-dark);
 }
 
 .navbar.scrolled .nav-links a:hover {
@@ -137,11 +137,11 @@ img {
 }
 
 .navbar.scrolled .logo-icon {
-  display: block;
+  display: none;
 }
 
 .navbar.scrolled .logo-dark {
-  display: none;
+  display: block;
 }
 
 /* .logo-text {
@@ -1473,22 +1473,23 @@ padding-bottom: 90px;
    =========================== */
 
 .contact-page-nav {
-  background: var(--green-dark) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: white !important;
+  border-bottom: 1px solid var(--border);
 }
 
 .contact-page-nav .logo-text,
 .contact-page-nav .nav-links a {
-  color: white !important;
+  color: var(--text-dark) !important;
 }
 
 .contact-page-nav .btn-ghost {
-  border-color: white !important;
-  color: white !important;
+  border-color: var(--text-muted) !important;
+  color: var(--text-muted) !important;
 }
 
 .contact-page-nav .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--green-pale);
+  color: var(--text-dark) !important;
 }
 
 .contact-page-nav {
@@ -1872,13 +1873,13 @@ padding-bottom: 90px;
 
 .navbar.scrolled .btn-ghost {
   background: transparent;
-  border-color: white;
-  color: white !important;
+  border-color: var(--text-muted);
+  color: var(--text-muted) !important;
 }
 
 .navbar.scrolled .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white !important;
+  background: var(--green-pale);
+  color: var(--text-dark) !important;
 }
 
 /* ===========================
