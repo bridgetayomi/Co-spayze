@@ -131,7 +131,7 @@
   .q-label { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
 
   /* Role cards */
-  .role-cards { display: flex; flex-direction: column; gap: 24px; }
+  .role-cards { display: flex; flex-direction: column; gap: 32px; }
   .role-card {
     border: 1.5px solid var(--border);
     border-radius: var(--radius-md);
