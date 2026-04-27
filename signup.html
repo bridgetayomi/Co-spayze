@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co-spayze — Your Ideal Space Awaits</title>
+  <link rel="stylesheet" href="style.css">
+  
+ 
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+
+<div class="wrap">
+
+  <!-- LEFT PANEL -->
+  <div class="left">
+    <img class="left-img"
+         src="/Img/barber shop.png"
+         alt="Modern building"/>
+
+    <div class="glass-card">
+      <div class="logo-icon">
+        <img src="/Img/" alt="">
+      </div>
+      <h2 class="card-title">Find your perfect<br/>space</h2>
+      <p class="card-sub">Digitally curating the future of shared<br/>professional environments.</p>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right">
+    <a href="index.html" class="logo-icon">
+            <img src="/Img/Logo.png" alt="Logo">
+          </a>
+
+    <h1 class="welcome-title">Create your account</h1>
+    <p class="welcome-sub">In just a few steps you are done</p>
+
+    <class="form-group">
+            <div class="form-group">
+              <label for="name">First name</label>
+              <input type="text" id="name" placeholder="Enter Name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Last name </label>
+              <input type="email" id="email" placeholder="Enter Email" />
+            </div>
+            <div class="form-group">
+              <label for="email">Phone number </label>
+              <input type="email" id="email" placeholder="Enter Email" />
+            </div>
+    </class>
+
+
+     <div class="form-row">
+        <div>
+          <label class="form-label">Occupation</label>
+          <div class="select-wrap">
+            <select class="form-select" id="occupation" onchange="this.classList.add('filled')">
+              <option value="" disabled selected>select</option>
+              <option>Student</option>
+              <option>Employed</option>
+              <option>Self-employed</option>
+              <option>Freelancer</option>
+              <option>Retired</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+    
+            <div class="form-group">
+              <label for="email">Job <Title></Title> </label>
+              <input type="email" id="email" placeholder="Enter" />
+            </div>
+            </div>
+
+             <div class="spacer"></div>
+    <button class="btn-continue" onclick="goToSignIn()">Submit</button>
+    <p class="sub-btn"><a href="/roleselction.html">Go back</a></p>
+    <p class="signup-text">Have an account already? <a href="signin.html" class="signup-link">Sign in</a></p>
+
+  </div>
+</div>
+
+
+<!-- modal  section-->
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal__icon-wrap">
+      <svg viewBox="0 0 48 48" fill="none">
+        <rect x="4" y="14" width="28" height="22" rx="2" fill="#2d5a3d"/>
+        <rect x="32" y="8" width="12" height="30" rx="2" fill="#2d5a3d" opacity=".55"/>
+        <rect x="35" y="12" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <rect x="39" y="12" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <rect x="35" y="19" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <rect x="39" y="19" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <path d="M6 16L18 7l12 9" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+        <rect x="10" y="28" width="8" height="8" rx="1" fill="white" opacity=".55"/>
+      </svg>
+    </div>
+    <div class="modal__title">Welcome to the community.</div>
+    <div class="modal__desc">Your account has been created successfully.</div>
+    <div class="inbox-box">
+      <div class="inbox-box__head">Check your inbox</div>
+      <div class="inbox-box__body">
+        We sent a verification link to <strong id="modal-email">yourname@email.com</strong>.<br>
+        Click it to activate your account.<br>
+        <a class="resend" href="#">Resend link</a>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="closeModal()">Go to dashboard</button>
+  </div>
+</div>
+</body>
+</html>

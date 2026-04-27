@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co-spayze — Your Ideal Space Awaits</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
+ 
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- LEFT PANEL -->
+  <div class="left">
+    <img class="left-img"
+         src="/Img/barber shop.png"
+         alt="Modern building"/>
+
+    <div class="glass-card">
+      <div class="logo-icon">
+        <img src="/Img/" alt="">
+      </div>
+      <h2 class="card-title">Find your perfect<br/>space</h2>
+      <p class="card-sub">Digitally curating the future of shared<br/>professional environments.</p>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right">
+    <a href="index.html" class="logo-icon">
+            <img src="/Img/Logo.png" alt="Logo">
+          </a>
+
+    <h1 class="welcome-title">Create Your Account</h1>
+    <p class="welcome-sub">In just a few steps you will be set up and ready to go.</p>
+
+      <div class="role-cards">
+        <div class="role-card selected" id="card-flatmate" onclick="selectRole(this,'flatmate')">
+          <div class="role-card__icon">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="5" r="3"/><path d="M3 16c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+          </div>
+          <div class="role-card__name">Flatmate</div>
+          <div class="role-card__desc">Split the rent, share the memories.<br>Find a room today.</div>
+        </div>
+        <div class="role-card" id="card-shopspace" onclick="selectRole(this,'shopspace')">
+          <div class="role-card__icon">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="6" width="14" height="10" rx="1.5"/><path d="M5 6V4a4 4 0 018 0v2"/></svg>
+          </div>
+          <div class="role-card__name">Shop Space</div>
+          <div class="role-card__desc">Find the ideal commercial spot to launch or expand your business.</div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <a href="/signup.html" class="btn-primary">Continue</a>
+
+      <p class="footer-note">Already have an account? <a onclick="goToSignIn()">Sign in</a></p>
+    </div>
+
+    
+
+    <!-- SCREEN 3 · Sign In -->
+    <!-- <div class="screen" id="screen-signin">
+      <div class="logo">
+        <svg viewBox="0 0 26 26" fill="none"><path d="M3 14L13 4l10 10" stroke="#2d5a3d" stroke-width="2" stroke-linecap="round"/><rect x="5" y="13" width="10" height="10" rx="1.5" fill="#2d5a3d"/><rect x="15" y="9" width="8" height="14" rx="1.5" fill="#2d5a3d" opacity=".55"/><rect x="7" y="18" width="4" height="5" rx="1" fill="white" opacity=".7"/></svg>
+        <span>Co-spayze</span>
+      </div>
+      <div class="screen__title">Welcome to<br>Co-spayze</div>
+      <div class="screen__sub">Its been a minute.</div>
+
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" id="email-input" placeholder="Enter your email address">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <div class="input-wrap">
+          <input class="form-input" type="password" id="pw-input" placeholder="Enter your password">
+          <button class="toggle-pw" onclick="togglePw()" type="button">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <path d="M1 9s3-5.5 8-5.5S17 9 17 9s-3 5.5-8 5.5S1 9 1 9z"/>
+              <circle cx="9" cy="9" r="2.5"/>
+              <line x1="2" y1="2" x2="16" y2="16" stroke="currentColor" stroke-width="1.6" id="eye-slash"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <button class="btn-primary" onclick="submitForm()">Continue</button>
+      <p class="footer-note">Don't have an account? <a onclick="goToRole()">Sign up</a></p>
+    </div> -->
+
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal__icon-wrap">
+      <svg viewBox="0 0 48 48" fill="none">
+        <rect x="4" y="14" width="28" height="22" rx="2" fill="#2d5a3d"/>
+        <rect x="32" y="8" width="12" height="30" rx="2" fill="#2d5a3d" opacity=".55"/>
+        <rect x="35" y="12" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <rect x="39" y="12" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <rect x="35" y="19" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <rect x="39" y="19" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
+        <path d="M6 16L18 7l12 9" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+        <rect x="10" y="28" width="8" height="8" rx="1" fill="white" opacity=".55"/>
+      </svg>
+    </div>
+    <div class="modal__title">Welcome to the community.</div>
+    <div class="modal__desc">Your account has been created successfully.</div>
+    <div class="inbox-box">
+      <div class="inbox-box__head">Check your inbox</div>
+      <div class="inbox-box__body">
+        We sent a verification link to <strong id="modal-email">yourname@email.com</strong>.<br>
+        Click it to activate your account.<br>
+        <a class="resend" href="#">Resend link</a>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="closeModal()">Go to dashboard</button>
+  </div>
+</div>
+
+
+</body>
+</html>

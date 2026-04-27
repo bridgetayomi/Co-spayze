@@ -15,49 +15,19 @@ if (navbar) {
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
-  // Run once on load in case page is already scrolled
   handleScroll();
 }
 
-// ─── Mobile Menu ───────────────────────────────────────────────────
-const menuToggle = document.getElementById('menuToggle');
-const closeMenu = document.getElementById('closeMenu');
-const mobileMenu = document.getElementById('mobileMenu');
+// ─── Mobile Menu (CLEAN VERSION) ───────────────────────────────────
+const toggle = document.getElementById("menu-toggle");
 
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent scroll
+if (toggle && navbar) {
+  toggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
   });
 }
 
-if (closeMenu && mobileMenu) {
-  closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scroll
-  });
-}
-
-// Close menu when clicking a link
-document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-});
-
-// logo
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
-// ─── Smooth scroll for "How it works" nav link ───────────────────────
+// ─── Smooth scroll for "How it works" ───────────────────────────────
 document.querySelectorAll('a[href*="#how-it-works"], a[href="#how-it-works"]').forEach(link => {
   link.addEventListener('click', (e) => {
     const target = document.getElementById('how-it-works');
@@ -70,7 +40,7 @@ document.querySelectorAll('a[href*="#how-it-works"], a[href="#how-it-works"]').f
   });
 });
 
-// ─── Smooth scroll for all anchor links ──────────────────────────────
+// ─── Smooth scroll for all anchor links ─────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
@@ -85,7 +55,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ─── Contact form ─────────────────────────────────────────────────────
+// ─── Contact form ───────────────────────────────────────────────────
 const sendBtn = document.getElementById('sendBtn');
 const cancelBtn = document.getElementById('cancelBtn');
 const toast = document.getElementById('toast');
@@ -97,7 +67,6 @@ if (sendBtn) {
     const subject = document.getElementById('subject')?.value.trim();
     const message = document.getElementById('message')?.value.trim();
 
-    // Simple validation
     if (!name || !email || !subject || !message) {
       alert('Please fill in all fields before sending.');
       return;
@@ -108,7 +77,6 @@ if (sendBtn) {
       return;
     }
 
-    // Simulate send
     sendBtn.innerHTML = '<i class="fa fa-spinner fa-spin" style="margin-right:6px;font-size:13px;"></i> Sending...';
     sendBtn.disabled = true;
 
@@ -116,13 +84,11 @@ if (sendBtn) {
       sendBtn.innerHTML = '<i class="fa fa-paper-plane" style="margin-right:6px;font-size:13px;"></i> Send Message';
       sendBtn.disabled = false;
 
-      // Clear form
       document.getElementById('name').value = '';
       document.getElementById('email').value = '';
       document.getElementById('subject').value = '';
       document.getElementById('message').value = '';
 
-      // Show toast
       showToast('✅ Message sent successfully!');
     }, 1400);
   });
@@ -130,8 +96,7 @@ if (sendBtn) {
 
 if (cancelBtn) {
   cancelBtn.addEventListener('click', () => {
-    const fields = ['name', 'email', 'subject', 'message'];
-    fields.forEach(id => {
+    ['name', 'email', 'subject', 'message'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.value = '';
     });
@@ -149,26 +114,21 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// ─── Scroll-reveal animation ──────────────────────────────────────────
+// ─── Scroll reveal animation ────────────────────────────────────────
 const revealTargets = document.querySelectorAll(
   '.listing-card, .why-card, .step-card, .platform-inner, .how-header, .listings-header'
 );
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // stagger sibling cards
-        const siblings = Array.from(entry.target.parentElement.children);
-        const idx = siblings.indexOf(entry.target);
-        setTimeout(() => {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }, idx * 80);
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1 });
 
   revealTargets.forEach(el => {
     el.style.opacity = '0';
@@ -178,8 +138,9 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-// ─── Hero search: Explore Now button ─────────────────────────────────
+// ─── Hero button scroll ─────────────────────────────────────────────
 const exploreBtn = document.querySelector('.btn-explore');
+
 if (exploreBtn) {
   exploreBtn.addEventListener('click', () => {
     const listingsSection = document.querySelector('.listings-section');
@@ -190,3 +151,66 @@ if (exploreBtn) {
     }
   });
 }
+
+// create account and role selection
+
+
+let currentScreen = 'screen-role';
+  let selectedRole  = 'flatmate';
+ 
+  function setDots(active) {
+    for (let i = 0; i < 4; i++) {
+      document.getElementById('dot' + i).className = 'dot ' + (i === active ? 'active' : 'inactive');
+    }
+  }
+ 
+  function showScreen(id, dotIndex) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    setDots(dotIndex);
+    currentScreen = id;
+    document.querySelector('.right-panel').scrollTop = 0;
+  }
+ 
+  function goToRole()    { showScreen('screen-role',    0); }
+  function goToProfile() { showScreen('screen-profile', 1); }
+  function goToSignIn()  { showScreen('screen-signin',  2); }
+ 
+  function goBack() {
+    if (currentScreen === 'screen-profile') goToRole();
+    else if (currentScreen === 'screen-signin') {
+      selectedRole === 'flatmate' ? goToProfile() : goToRole();
+    }
+  }
+ 
+  function goFromRole() {
+    selectedRole === 'flatmate' ? goToProfile() : goToSignIn();
+  }
+ 
+  function selectRole(el, role) {
+    document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedRole = role;
+  }
+ 
+  function togglePw() {
+    const input = document.getElementById('pw-input');
+    const slash = document.getElementById('eye-slash');
+    if (input.type === 'password') { input.type = 'text';     slash.style.display = 'none'; }
+    else                           { input.type = 'password'; slash.style.display = '';     }
+  }
+ 
+  function submitForm() {
+    const email =
+      document.getElementById('email-input').value.trim() ||
+      document.getElementById('profile-email').value.trim() ||
+      'yourname@email.com';
+    document.getElementById('modal-email').textContent = email;
+    document.getElementById('modal-overlay').classList.add('show');
+    setDots(3);
+  }
+ 
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('show');
+    goToRole();
+  }

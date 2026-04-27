@@ -207,6 +207,49 @@ img {
 
 }
 
+/* Nav mobile */
+
+.menu-toggle {
+  display: none;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+  }
+
+  .nav-links a {
+    color: var(--text-dark);
+  }
+
+  .nav-actions {
+    gap: 16px;
+  }
+
+  /* when menu is active */
+  .navbar.active .nav-links,
+  .navbar.active .nav-actions {
+    display: flex;
+  }
+}
+
 .cta-section {
   background: #F0F4F1 !important;
 }
@@ -240,6 +283,9 @@ img {
     text-align: left;
   }
 }
+
+
+
 
 
 .cta-section {
