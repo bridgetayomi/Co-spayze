@@ -1581,6 +1581,11 @@ padding-bottom: 90px;
   text-align: center;
 }
 
+.mobile-nav-actions .btn-ghost:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
 /* Override for user's specific request if they want it white even on white menu (careful) */
 /* But usually they mean the header buttons. I'll stick to legible on menu. */
 
@@ -1653,6 +1658,35 @@ padding-bottom: 90px;
     gap: 20px;
   }
 
+  .how-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .cta-content h2,
+  .cta-content h2 .highlight {
+    font-size: 42px !important;
+    max-width: 100% !important;
+  }
+
+  .cta-text {
+    align-items: flex-start;
+  }
+
+  .cta-text p {
+    text-align: left;
+    max-width: 100% !important;
+  }
+
+  .cta-text .btn-primary {
+    align-self: flex-start;
+  }
+
   .contact-main {
     display: flex;
     flex-direction: column-reverse;
@@ -1676,6 +1710,16 @@ padding-bottom: 90px;
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-send,
+  .btn-cancel {
+    width: 100%;
+    padding: 16px;
   }
 }
 
