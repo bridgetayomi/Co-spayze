@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Co-spayze — Sign In</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body class="signin-page-body">
 
-    <div class="signin-container">
-        <!-- LEFT: Visual Side (Hidden on Mobile) -->
-        <div class="signin-left">
-            <div class="glass-card">
-                <div class="glass-icon-circle">
-                    <img src="/Img/Logo2.png" alt="Home Icon" class="glass-icon">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Co-spayze – Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+            <img class="bg-photo" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                alt="Modern building" />
+
+            <div class="card">
+                <div class="card-icon-wrap">
+                    <!-- House + grid icon (SVG approximation of the logo mark) -->
+                    <svg class="card-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="28" width="24" height="26" rx="2" fill="#2f6b4a" />
+                        <polygon points="18,10 42,28 6,28" fill="#2f6b4a" />
+                        <rect x="32" y="20" width="22" height="34" rx="2" fill="#2f6b4a" opacity="0.75" />
+                        <rect x="36" y="32" width="6" height="6" rx="1" fill="white" />
+                        <rect x="44" y="32" width="6" height="6" rx="1" fill="white" />
+                        <rect x="36" y="40" width="6" height="6" rx="1" fill="white" />
+                        <rect x="44" y="40" width="6" height="6" rx="1" fill="white" />
+                    </svg>
                 </div>
-                <h2>Find your perfect space</h2>
-                <p>Digitally curating the future of shared professional environments.</p>
-                <div class="glass-dots">
+
+                <h2 class="card-title">Find your perfect<br />space</h2>
+                <p class="card-sub">Digitally curating the future of shared<br />professional environments.</p>
+
+                <div class="dots">
                     <span class="dot active"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
@@ -26,43 +43,53 @@
             </div>
         </div>
 
-        <!-- RIGHT: Form Side -->
-        <div class="signin-right">
-            <div class="signin-header">
-                <a href="index.html" class="logo-link">
-                    <img src="/Img/Property 1=blacklogo.svg" alt="Co-spayze Logo" class="signin-logo">
-                </a>
-                <a href="index.html" class="go-back-mobile"><i class="fa fa-arrow-left"></i> Go back</a>
+        <!-- RIGHT PANEL -->
+        <div class="right-panel">
+
+            <!-- Logo -->
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 22 L14 5 L24 22 Z" fill="none" stroke="#2f6b4a" stroke-width="2.2"
+                        stroke-linejoin="round" />
+                    <rect x="9" y="14" width="10" height="8" rx="1.5" fill="none" stroke="#2f6b4a" stroke-width="2" />
+                    <circle cx="22" cy="8" r="4" fill="#2f6b4a" opacity="0.35" />
+                </svg>
+                <span class="logo-text">Co-spayze</span>
             </div>
 
-            <div class="signin-content">
-                <h1>Welcome to<br>Co-spayze</h1>
-                <p class="subtitle">Its been a minute.</p>
+            <!-- Heading -->
+            <h1 class="welcome-title">Welcome to<br />Co-spayze</h1>
+            <p class="welcome-sub">Its been a minute.</p>
 
-                <form class="signin-form">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email address" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="password-wrap">
-                            <input type="password" id="password" placeholder="Enter your password" required>
-                            <button type="button" class="toggle-password">
-                                <i class="fa-regular fa-eye-slash"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn-continue">Continue</button>
-                </form>
-
-                <p class="signup-prompt">Already have an account? <a href="#">Sign up</a></p>
+            <!-- Form -->
+            <div class="form-group">
+                <label class="field-label" for="email">Email Address</label>
+                <input class="field-input" type="email" id="email" placeholder="Enter your email address" />
             </div>
+
+            <div class="form-group">
+                <label class="field-label" for="password">Password</label>
+                <div class="input-wrapper">
+                    <input class="field-input" type="password" id="password" placeholder="Enter your first name" />
+                    <button class="eye-btn" type="button" aria-label="Toggle password visibility">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" />
+                            <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" />
+                            <line x1="1" y1="1" x2="23" y2="23" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <button class="btn-continue" type="button">Continue</button>
+
+            <p class="signup-text">Already have an account? <a href="#" class="signup-link">Sign up</a></p>
+
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
+
 </html>
