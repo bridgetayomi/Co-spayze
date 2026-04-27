@@ -366,15 +366,7 @@ img {
   align-self: flex-end;
 }
 
-.btn-ghost {
-  color: #6B7280 !important;
-  border-color: #D1D5DB !important;
-}
-
-.btn-ghost:hover {
-  background: #F9FAFB !important;
-  color: #374151 !important;
-}
+/* Removed duplicate gray override for .btn-ghost */
 
 @media (max-width: 768px) {
 
