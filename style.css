@@ -2222,3 +2222,246 @@ body {
     font-size: 2rem;
   }
 }
+/* sign in css */
+
+    /* ── Page Layout ── */
+    .wrap {
+      display: flex;
+      height: 100vh;
+      min-height: 600px;
+    }
+
+    /* ── LEFT PANEL ── */
+    .left {
+      position: relative;
+      flex: 0 0 50%;
+      overflow: hidden;
+    }
+
+    .left-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.72) brightness(0.9);
+    }
+
+    /* Glassmorphism card */
+    .glass-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(370px, 72%);
+      background: rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(18px) saturate(120%);
+      -webkit-backdrop-filter: blur(18px) saturate(120%);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 20px;
+      padding: 40px 36px 32px;
+      text-align: center;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
+    }
+
+    .icon-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(200, 215, 207, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 26px;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a2e22;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .card-sub {
+      font-size: 0.875rem;
+      color: #3a4a40;
+      line-height: 1.55;
+      margin-bottom: 26px;
+    }
+
+    .dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .dot {
+      height: 5px;
+      border-radius: 3px;
+      background: rgba(30, 60, 40, 0.3);
+    }
+
+    .dot { width: 20px; }
+    .dot.active { width: 28px; background: #2f6b4a; }
+
+    /* ── RIGHT PANEL ── */
+    .right {
+      flex: 1;
+      background: #f5f2ed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 80px;
+      overflow-y: auto;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #2f6b4a;
+      letter-spacing: -0.01em;
+    }
+
+    /* Heading */
+    .welcome-title {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #1a2e22;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .welcome-sub {
+      font-size: 0.9rem;
+      color: #a0b0a8;
+      margin-bottom: 32px;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #1a2e22;
+      margin-bottom: 7px;
+    }
+
+    .field-input {
+      width: 100%;
+      height: 52px;
+      padding: 0 18px;
+      border: 1.5px solid #d8d4ce;
+      border-radius: 12px;
+      background: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #5a6b62;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .field-input::placeholder {
+      color: #b0bfb8;
+    }
+
+    .field-input:focus {
+      border-color: #2f6b4a;
+    }
+
+    /* Password wrapper */
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-wrapper .field-input {
+      padding-right: 48px;
+    }
+
+    .eye-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #b0bfb8;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      line-height: 0;
+    }
+
+    .eye-btn:hover {
+      color: #5a6b62;
+    }
+
+    /* Continue button */
+    .btn-continue {
+      width: 100%;
+      height: 56px;
+      margin-top: 32px;
+      border: none;
+      border-radius: 50px;
+      background: #2f6b4a;
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-continue:hover {
+      background: #3a7d58;
+    }
+
+    .btn-continue:active {
+      transform: scale(0.98);
+    }
+
+    /* Sign up */
+    .signup-text {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #5a6b62;
+    }
+
+    .signup-link {
+      color: #2f6b4a;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .left { display: none; }
+      .right { padding: 48px 36px; }
+    }
+
+    @media (max-width: 480px) {
+      .right { padding: 36px 24px; }
+      .welcome-title { font-size: 2rem; }
+    }
