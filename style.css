@@ -2029,12 +2029,14 @@ padding-bottom: 90px;
 
   .right {
     padding: 48px 36px;
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 480px) {
   .right {
     padding: 36px 20px;
+    justify-content: flex-start;
   }
 
   .welcome-title {
