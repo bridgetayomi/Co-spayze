@@ -1829,9 +1829,11 @@ padding-bottom: 90px;
     }
    /* Continue button */
     .btn-continue {
+      display: block;
       width: 100%;
       height: 56px;
       margin-top: 32px;
+      padding: 0 16px;
       border: none;
       border-radius: 50px;
       background: #2f6b4a;
