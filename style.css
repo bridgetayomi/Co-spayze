@@ -222,30 +222,50 @@ img {
 
   }
 
+  .navbar {
+    flex-wrap: wrap;
+  }
+
   .nav-links,
   .nav-actions {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: white;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 20px;
   }
 
   .nav-links a {
-    color: var(--text-dark);
+    color: var(--text-dark) !important;
+    padding: 12px 0;
   }
 
   .nav-actions {
     gap: 16px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  .btn-ghost {
+    color: var(--green-dark) !important;
+    border-color: var(--green-dark);
   }
 
   /* when menu is active */
+  .navbar.active {
+    background: white;
+  }
+  
   .navbar.active .nav-links,
   .navbar.active .nav-actions {
     display: flex;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  
+  .navbar.active .logo-icon {
+    display: none;
+  }
+  .navbar.active .logo-dark {
+    display: block;
   }
 }
 
