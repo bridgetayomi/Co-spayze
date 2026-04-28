@@ -130,6 +130,8 @@
   .screen__sub { font-size: 14px; color: var(--text-light); margin-bottom: 28px; }
   .q-label { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 16px; }
 
+
+
   /* Role cards */
   .role-cards { display: flex; flex-direction: column; gap: 32px; }
   .role-card {
@@ -138,6 +140,9 @@
     padding: 22px; cursor: pointer;
     transition: border-color .2s, background .2s, box-shadow .2s;
   }
+
+
+
   .role-card:hover { border-color: var(--green-mid); box-shadow: var(--shadow-sm); }
   .role-card.selected {
     background: var(--green-dark);
@@ -156,6 +161,9 @@
   .role-card__name { font-weight: 600; font-size: 16px; margin-bottom: 5px; }
   .role-card__desc { font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.8); }
   .role-card:not(.selected) .role-card__desc { color: var(--text-light); }
+
+
+  
 
   /* Form */
   .form-group { margin-bottom: 18px; }
