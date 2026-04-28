@@ -1919,7 +1919,7 @@ padding-bottom: 90px;
   background: var(--white);
   border-radius: var(--radius-xl);
   padding: 44px 36px 40px;
-  width: 100%;
+  width: calc(100% - 32px);
   max-width: 380px;
   text-align: center;
   box-shadow: var(--shadow-lg);
@@ -2034,11 +2034,19 @@ padding-bottom: 90px;
 
 @media (max-width: 480px) {
   .right {
-    padding: 36px 24px;
+    padding: 36px 20px;
   }
 
   .welcome-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+  
+  .welcome-sub {
+    font-size: 0.85rem;
+  }
+  
+  .modal {
+    padding: 32px 24px 28px;
   }
 }
 
@@ -2156,7 +2164,7 @@ padding-bottom: 90px;
 
   .form-row {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 16px;
   }
 
   .form-actions {
