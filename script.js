@@ -201,13 +201,24 @@ let currentScreen = 'screen-role';
   }
  
   function submitForm() {
-    const email =
-      document.getElementById('email-input').value.trim() ||
-      document.getElementById('profile-email').value.trim() ||
-      'yourname@email.com';
-    document.getElementById('modal-email').textContent = email;
-    document.getElementById('modal-overlay').classList.add('show');
-    setDots(3);
+    let email = 'yourname@email.com';
+    const emailInput = document.getElementById('email-input');
+    const profileEmail = document.getElementById('profile-email');
+    const emailField = document.getElementById('email');
+    
+    if (emailInput && emailInput.value.trim()) email = emailInput.value.trim();
+    else if (profileEmail && profileEmail.value.trim()) email = profileEmail.value.trim();
+    else if (emailField && emailField.value.trim()) email = emailField.value.trim();
+
+    const modalEmail = document.getElementById('modal-email');
+    if (modalEmail) modalEmail.textContent = email;
+    
+    const modalOverlay = document.getElementById('modal-overlay');
+    if (modalOverlay) modalOverlay.classList.add('show');
+    
+    try {
+      if (typeof setDots === 'function') setDots(3);
+    } catch(e) {}
   }
  
   function closeModal() {

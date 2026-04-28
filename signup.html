@@ -52,11 +52,11 @@
             </div>
             <div class="form-group">
               <label for="email">Last name </label>
-              <input type="email" id="email" placeholder="Enter Email" />
+              <input type="email" id="email" placeholder="Enter last name" />
             </div>
             <div class="form-group">
-              <label for="email">Phone number </label>
-              <input type="email" id="email" placeholder="Enter Email" />
+              <label for="phone">Phone number </label>
+              <input type="tel" id="phone" placeholder="Enter phone number" />
             </div>
     </div>
 
@@ -83,7 +83,7 @@
             </div>
       </div>
 
-    <button class="btn-continue" onclick="submitForm()" style="margin-top: 48px;">Submit</button>
+    <button class="btn" onclick="submitForm()">Submit</button>
     <p class="sub-btn" style="text-align: center; margin-top: 16px;"><a href="/roleselction.html" style="color: var(--text-muted); text-decoration: none;">Go back</a></p>
     <p class="signup-text" style="font-size: 15px; margin-top: 24px;">Have an account already? <a href="signin.html" class="signup-link">Sign in</a></p>
 
@@ -97,18 +97,16 @@
   <div class="modal">
     <div class="modal__icon-wrap">
       <svg viewBox="0 0 48 48" fill="none">
-        <rect x="4" y="14" width="28" height="22" rx="2" fill="#2d5a3d"/>
-        <rect x="32" y="8" width="12" height="30" rx="2" fill="#2d5a3d" opacity=".55"/>
-        <rect x="35" y="12" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
-        <rect x="39" y="12" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
-        <rect x="35" y="19" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
-        <rect x="39" y="19" width="3" height="4" rx=".5" fill="white" opacity=".7"/>
-        <path d="M6 16L18 7l12 9" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
-        <rect x="10" y="28" width="8" height="8" rx="1" fill="white" opacity=".55"/>
+        <path d="M24 12 h10 v24 h-10 z" fill="#44785C" />
+        <rect x="29" y="15" width="5" height="4" fill="#e8f0eb" />
+        <rect x="29" y="21" width="5" height="4" fill="#e8f0eb" />
+        <rect x="29" y="27" width="5" height="4" fill="#e8f0eb" />
+        <path d="M10 24 l12 -10 l12 10 v12 h-24 z" fill="#44785C" />
+        <rect x="18" y="28" width="6" height="8" fill="#e8f0eb" />
       </svg>
     </div>
     <div class="modal__title">Welcome to the community.</div>
-    <div class="modal__desc">Your account has been created successfully.</div>
+    <div class="modal__desc">Welcome to the community. Your account has been<br>created successfully.</div>
     <div class="inbox-box">
       <div class="inbox-box__head">Check your inbox</div>
       <div class="inbox-box__body">
