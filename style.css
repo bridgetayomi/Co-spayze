@@ -278,11 +278,13 @@ img {
   }
   
   .navbar.active .logo-icon {
-    display: none;
+    display: block;
+  }
+  .navbar.active .logo-icon img {
+    height: 24px;
   }
   .navbar.active .logo-dark {
-    display: block;
-    height: 22px;
+    display: none;
   }
 }
 
