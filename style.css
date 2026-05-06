@@ -282,6 +282,7 @@ img {
   }
   .navbar.active .logo-dark {
     display: block;
+    height: 22px;
   }
 }
 
