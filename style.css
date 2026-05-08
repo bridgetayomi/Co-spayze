@@ -2286,7 +2286,7 @@ img {
    /* Role cards */
   .role-cards { display: flex; flex-direction: column; gap: 32px; }
   .role-card {
-    border: 1.5px solid var(--border);
+    border: 1.5px solid var(--border-color);
     border-radius: 16px;
     padding: 22px; cursor: pointer;
     transition: border-color .2s, background .2s, box-shadow .2s;
@@ -2309,7 +2309,7 @@ img {
   }
 
 
-  .role-card:not(.selected) .role-card__icon { background: var(--green-light); border-color: var(--border); }
+  .role-card:not(.selected) .role-card__icon { background: var(--green-light); border-color: var(--border-color); }
   .role-card__icon svg { width: 18px; height: 18px; }
   .role-card__name { font-weight: 600; font-size: 16px; margin-bottom: 5px; }
   .role-card__desc { font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.8); }
