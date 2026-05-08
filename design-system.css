@@ -1,0 +1,100 @@
+/* 
+  CO-SPAYZE DESIGN SYSTEM
+  Centralized variables and core component styles
+*/
+
+:root {
+  /* Brand Colors */
+  --green-dark: #3D6B50;
+  --green-mid: #4A7A5E;
+  --green-light: #6B9E80;
+  --green-pale: #E8F0EB;
+  --green-bg: #F0F4F1;
+  
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-light: #F7FAF8;
+  --gray-mid: #C8DDD2;
+  --gray-dark: #3D5244;
+  --gray-muted: #7A9485;
+  --border-color: #C8DDD2;
+  
+  /* Text Colors */
+  --text-dark: #1A2E22;
+  --text-mid: #3D5244;
+  --text-muted: #7A9485;
+  --text-white: #FFFFFF;
+  
+  /* Functional Colors */
+  --success: #4CAF82;
+  --warning: #8B7355;
+  --error: #E53E3E;
+  
+  /* Typography */
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Satoshi', sans-serif;
+  
+  /* Spacing & Layout */
+  --gutter: clamp(24px, 5.56vw, 80px);
+  --content-max: 1440px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-full: 100px;
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(61, 107, 80, 0.1);
+  --shadow-lg: 0 10px 40px rgba(61, 107, 80, 0.15);
+  
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+/* Core Component Base Styles */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--green-mid);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}

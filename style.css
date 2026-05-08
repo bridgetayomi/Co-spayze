@@ -5,32 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
 
-:root {
-  --green-dark: #3D6B50;
-  --green-mid: #4A7A5E;
-  --green-light: #6B9E80;
-  --green-pale: #E8F0EB;
-  --green-bg: #F0F4F1;
-  --white: #FFFFFF;
-  --text-dark: #1A2E22;
-  --text-mid: #3D5244;
-  --text-muted: #7A9485;
-  --border: #C8DDD2;
-  --card-bg: #F7FAF8;
-  --footer-bg: #3D6B50;
-  --badge-available: #4CAF82;
-  --gray: #CFCFCF;
-  --badge-studio: #8B7355;
-  --font-display: 'Clash Display';
-  --font-body: 'Satoshi', sans-serif;
-  --radius: 12px;
-  --radius-lg: 20px;
-  --shadow: 0 4px 20px rgba(61, 107, 80, 0.1);
-  --shadow-lg: 0 10px 40px rgba(61, 107, 80, 0.15);
+@import url('design-system.css');
 
-  /* Responsive gutter: 80px at 1440, scales down gracefully */
-  --gutter: clamp(24px, 5.56vw, 80px);
-  --content-max: 1440px;
+:root {
+  /* Site-specific overrides or additions can go here */
 }
 
 *,
@@ -278,13 +256,11 @@ img {
   }
   
   .navbar.active .logo-icon {
-    display: block;
-  }
-  .navbar.active .logo-icon img {
-    height: 24px;
+    display: none;
   }
   .navbar.active .logo-dark {
-    display: none;
+    display: block;
+    height: 20px;
   }
 }
 
